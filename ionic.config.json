@@ -1,0 +1,7 @@
+{
+  "name": "fitness_example",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
