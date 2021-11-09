@@ -1,0 +1,15 @@
+:host {
+        padding: 40px;
+    ion-card {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color:white;
+        --background: linear-gradient(90deg, rgba(230,230,255,1) 5%, rgba(96,228,255,1) 50%, rgba(230,230,255,1) 95%);
+    }
+    img {
+        padding: 10px;
+    }
+    ion-card-title {
+        color:white;
+        text-align: center;
+    }    
+}

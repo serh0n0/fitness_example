@@ -1,0 +1,64 @@
+:host {
+    font-family: 'open-sans';
+    ion-row {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        margin-right: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: purple;
+
+    }
+    ion-col:hover {
+        border-bottom: 3px solid black;
+
+    }
+    ion-grid {
+        margin-top: 50%;
+    }
+    .line {
+        margin-top: 5px;
+        border-bottom: 4px solid;
+        color: #cccccc;
+    }
+    .none {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 50%;
+        color: #776a6a;
+    }
+    ion-title {
+        text-align: center;
+        margin-top: -10px;
+
+    }
+    ion-icon {
+        margin-top: -20px;
+        font-size: 1.5rem;
+        
+        
+    }
+    
+    ion-card img {
+        height: 200px;
+    }
+    .text {
+        margin-left: 38%;
+        align-items: center;
+        font-family: "open-sans";
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+    .content {
+        margin-top: 25px;
+        text-align: center;
+        font-size: "open-sans";
+        font-size: 15px;
+    }
+    ion-list {
+        margin-top: 5px;
+    }
+}
