@@ -184,7 +184,7 @@ export namespace category {
 export interface Video_Packet{
   _id?: string;
   name?: string;
-  videos?: (Video & id | string)[];
+  videos?: (Video);
 }
 export namespace video_packet {
   const BUCKET_ID = '618142b7b0ba86002e5d6558';
@@ -516,7 +516,7 @@ export interface Training{
   _id?: string;
   name?: string;
   user?: (User & id | string);
-  packet?: (Video_Packet & id | string);
+  packet?: (Video_Packet);
   teacher?: (Teacher & id | string);
 }
 export namespace training {

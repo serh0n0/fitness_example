@@ -1,16 +1,16 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Home Page
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <app-card   
-   *ngFor="let item of category"
+
+
+  <app-card *ngFor="let item of category" 
+  
   
   [card]="item"
+  [routerLink]="['/details/' +item._id]"
   >
+    
+  
   </app-card>
-</ion-content>
+
+  
+  
+  

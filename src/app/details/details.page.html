@@ -10,11 +10,14 @@
 <ion-content>
   <ion-card *ngFor="let item of video">
     <ion-card-header>
-      {{item.name}}
+      <ion-card-title>{{item.name}}</ion-card-title>
     </ion-card-header>
     <img src="{{item.image}}" alt="">
     <ion-card-content>
       {{item.description}}
     </ion-card-content>
+    <ion-button
+  [routerLink]="['/video-details/'+ item._id]"
+    >WATCH</ion-button>
   </ion-card>
 </ion-content>

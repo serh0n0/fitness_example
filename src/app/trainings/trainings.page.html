@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>trainings</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <ng-container *ngFor="let item of training">
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          {{item.name}}
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-slides pager="true" [options]="slideOpts">
+          <ion-slide *ngFor="let item2 of item.packet.videos">
+            <img src="{{item2.image}}" alt=""
+[routerLink]="['/video-details/'+ item2._id]"
+>
+          </ion-slide>
+        </ion-slides>
+      </ion-card-content>
+    </ion-card>
+
+  </ng-container>
+  
+</ion-content>

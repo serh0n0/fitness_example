@@ -9,10 +9,6 @@ export class CardComponent implements OnInit {
   @Input() card:any;
 
   ngOnInit() {
-    console.log(this.card)
-  }
-  test (item:any) {
-    console.log(item);
   }
 
 }

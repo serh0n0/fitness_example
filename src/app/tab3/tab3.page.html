@@ -5,38 +5,20 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
-  <ng-container>
-
-    <span class="text">
-      Performance
-    </span>
-    <div class="content" *ngFor="let item of performance"> 
-    <ion-list>
-      {{item.title + ": " + item.metrics[0]}} 
-    </ion-list>
-    </div>
-  </ng-container>  
-  <ion-grid>
-    <ion-row>
-      <ion-col (click)="controlWatch()">
-        <div>Watch</div>
-      </ion-col>
-      <ion-col (click)="controlWatchVideo()">
-        <div>Watched Videos</div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-  <div class="line"></div>
-  <ng-container *ngFor="let item of watchVideos">
-    <div *ngIf="this.control == true && item.video.duration >0">
-      <ion-card>
-        <img src="{{item.video.image}}" />
-        <ion-card-header>
-          <ion-card-title>{{item.video.name}}</ion-card-title>
-        </ion-card-header>
-        <ion-card-content> {{item.video.description}} </ion-card-content>
-      </ion-card>
-    </div>
-  </ng-container>
-
+ 
+ <div class="line">
+ </div>
+ <ion-list>
+  <ion-item detail="true" [routerLink]="['/trainings/'+user?._id]">
+    Trainings
+  </ion-item>
+  <ion-item detail="true"
+  [routerLink]="['/watched-videos-page/'+user?._id]"
+  >
+    Watch Videos
+  </ion-item>
+  <ion-item detail="true">
+    Food Program
+  </ion-item>
+</ion-list>
 </ion-content>
