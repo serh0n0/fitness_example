@@ -23,13 +23,14 @@ export interface User{
   surname?: string;
   gender?: ('male'|'female'|'other');
   vip?: boolean;
+  image?: string;
   birthdate?: Date | string;
   created_at?: Date | string;
   phone_number?: string;
   mail?: string;
 }
 export namespace user {
-  const BUCKET_ID = '618142b6b0ba86002e5d654f';
+  const BUCKET_ID = '618b72b95ee9b9002f154643';
     export function get (...args: getArgs) {
       return Bucket.data.get<User & id>(BUCKET_ID, ...args);
     };
@@ -249,6 +250,9 @@ export interface Food_Program{
   user?: (User & id | string);
   teacher?: (Teacher & id | string);
   created_at?: Date | string;
+  days?: {
+  day_of_week?: (1|2|3|4|5|6|7);
+  description?: string;}[];
 }
 export namespace food_program {
   const BUCKET_ID = '618142b7b0ba86002e5d655c';
@@ -404,12 +408,16 @@ export namespace weekly_program {
 export interface Performance{
   _id?: string;
   title?: string;
-  user?: (User & id | string);
   teacher?: (Teacher & id | string);
-  metrics?: {
-  value?: number;
-  metric?: string};
+  user?: (User & id | string);
   created_at?: Date | string;
+  metrics?: {
+  left_arm?: string;
+  right_arm?: string;
+  right_leg?: string;
+  left_leg?: string;
+  shoulders?: string;
+  weight?: string;};
 }
 export namespace performance {
   const BUCKET_ID = '618142b7b0ba86002e5d6563';

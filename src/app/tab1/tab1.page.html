@@ -1,16 +1,18 @@
 <ion-content [fullscreen]="true">
+  <div >
+    <ion-slides [options]="slideOpts">
+      <ion-slide *ngFor="let item of teacher">
+        <ion-avatar >
+          <img [src]="item?.picture" />
+        </ion-avatar>
+      </ion-slide>
+    </ion-slides>
+  </div>
 
-
-  <app-card *ngFor="let item of category" 
-  
-  
-  [card]="item"
-  [routerLink]="['/details/' +item._id]"
+  <app-card
+    *ngFor="let item of category"
+    [card]="item"
+    [routerLink]="['/details/' +item._id]"
   >
-    
-  
   </app-card>
-
-  
-  
-  
+</ion-content>

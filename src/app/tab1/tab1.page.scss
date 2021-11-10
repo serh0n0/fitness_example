@@ -1,12 +1,13 @@
 :host {
-    
-    ion-card {
-        width: 70%;
+    div {
+        display: flex;
+        margin: 20px 10px 0 20px;
     }
-    span {
-        text-align: center;
-        font-family: "open-sans";
-        margin-left: 35%;
-        font-size:1.5rem;
+    img {
+        width: 100%;
+    }
+    ion-avatar {
+        width: 100px;
+        height: 100px;
     }
 }

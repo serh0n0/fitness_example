@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'watched-videos-page',
     loadChildren: () => import('./watched-videos-page/watched-videos-page.module').then( m => m.WatchedVideosPagePageModule)
+  },
+  {
+    path: 'food-program',
+    loadChildren: () => import('./food-program/food-program.module').then( m => m.FoodProgramPageModule)
   }
 ];
 @NgModule({
