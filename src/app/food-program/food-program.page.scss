@@ -23,15 +23,11 @@
       span {
         color: #696996;
       }
+      ion-slide {
+        padding-bottom:30px;
+      }
       ion-slides {
-          height: 100px;;
-          margin-bottom: 35px;
-        ::ng-deep{
-            .swiper-pagination-bullets{
-                height: 50px;
-                color:red;
-                bottom: -35px !important;
-            }
+        ::ng-deep {
             .swiper-pagination-bullet-active {
                 background-color: black;
             }
@@ -39,10 +35,7 @@
                 background-color: black;
             }
         }
-        .content{
-            height: 110px;
-        }
+      
       }
-    }
-  }
-}
+}}}
+

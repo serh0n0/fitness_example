@@ -3,7 +3,11 @@
     <ion-slides [options]="slideOpts">
       <ion-slide *ngFor="let item of teacher">
         <ion-avatar >
-          <img [src]="item?.picture" />
+          <img [src]="item?.picture" 
+    [routerLink]="['/teacher-page/' +item._id]"
+          
+          >
+          
         </ion-avatar>
       </ion-slide>
     </ion-slides>

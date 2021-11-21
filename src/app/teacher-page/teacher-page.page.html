@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{teacher?.name + " "+teacher?.surname}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-avatar>
+    <img [src]="teacher?.picture" alt="">
+  </ion-avatar>
+  <div class="line">
+  </div>
+  <span>
+    Videos
+  </span>
+</ion-content>

@@ -1,3 +1,10 @@
-:host {
-  
+:host { 
+    font-family: "open-sans";
+    .video-description {
+        font-weight: 500;
+
+    }
+    video {
+        margin-bottom: 20px;
+    }
 }

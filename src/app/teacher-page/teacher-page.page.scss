@@ -1,0 +1,20 @@
+:host {
+    text-align: center;
+    font-family: 'open-sans';
+    .line {
+        border-bottom: 4px solid;
+        color: #cccccc;
+        margin-top: 40%;
+    }
+  
+    ion-avatar {
+        border: 0;
+        width: 200px;
+        height: 200px;
+        margin-left: 100px;
+        margin-top: 20px;
+     }
+     span {
+        font-size:20px;
+     }
+}

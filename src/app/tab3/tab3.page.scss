@@ -3,7 +3,7 @@
     .line {
         border-bottom: 4px solid;
         color: #cccccc;
-        margin-top: 70%;
+        margin-top: 40%;
     }
     ion-icon {
         margin-top: -20px;
@@ -12,6 +12,11 @@
         
     }
     ion-avatar {
-        
+       border: 0;
+       width: 200px;
+       height: 200px;
+       margin-left: 100px;
+       margin-top: 20px;
     }
+    
 }
