@@ -13,8 +13,16 @@
         height: 200px;
         margin-left: 100px;
         margin-top: 20px;
+        border: solid 5px #eb445a;
      }
-     span {
-        font-size:20px;
-     }
+    .biography {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    ion-list {
+        margin-top:10px;
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
 }

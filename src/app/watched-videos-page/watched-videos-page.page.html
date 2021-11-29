@@ -10,8 +10,12 @@
 <ion-content>
   <ion-card >
     <ion-slides pager="true" [options]="slideOpts">
-      <ion-slide  *ngFor="let item of watchedVideos">
+      <ion-slide  *ngFor="let item of watchedVideos"
+  [routerLink]="['/video-details/'+item.video._id]"
+      
+      >
         <ion-card-header>
+          
           <ion-card-title>
             {{item.video.name}}
           </ion-card-title>

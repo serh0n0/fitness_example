@@ -1,0 +1,21 @@
+:host {
+  .container {
+    width: 100vw;
+    height: calc(100vh - 44px);
+    display: flex;
+    flex-direction: column;
+
+    .long {    
+      flex: unset;
+      --background: #ccc;
+      color: black;
+      border: none;
+      width: 70%;
+      top: 10%;
+      height: 60px!important;
+      left: 16%;
+      margin-top: 20px;
+
+    }
+  }
+}

@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>{{teacher?.name + " "+teacher?.surname}}</ion-title>
+  <ion-toolbar color="danger">
+    <ion-title>Profile Page</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
@@ -9,11 +9,27 @@
 
 <ion-content>
   <ion-avatar>
-    <img [src]="teacher?.picture" alt="">
+    <img [src]="teacher?.picture" alt="" />
+    <ion-list>
+    Name: {{teacher?.name}}
+    </ion-list>
+    <ion-list>
+     Surname: {{teacher?.surname}}
+    </ion-list>
+    <ion-list>
+      Gender: {{teacher?.gender}}
+    </ion-list>
   </ion-avatar>
-  <div class="line">
-  </div>
-  <span>
-    Videos
-  </span>
+  <div class="line"></div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        biography
+      </ion-card-title>
+      <ion-card-content>
+        {{teacher?.biography}}
+      </ion-card-content>
+    </ion-card-header>
+  </ion-card>
+ 
 </ion-content>

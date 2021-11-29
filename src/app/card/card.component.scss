@@ -1,28 +1,21 @@
 :host {
-    ion-card {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color:white;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding:0;
-                --background: linear-gradient(90deg, rgba(230,230,255,1) 5%, rgba(96,228,255,1) 50%, rgba(230,230,255,1) 95%);
-    }
-    img {
-        padding-left: 30px;
-        height: 100%;
-        }
-    ion-card:hover {
+  ion-item {
+      color:red;
+    &.card-item {
+      &:hover {
+        --background: red;
         opacity: 0.5;
+      }
     }
-    div {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: center;
-        padding-left: 40px;
+
+    h2 {
+      font-size: 27px;
+      font-family: cursive;
+      position: absolute;
+      top: 20px;
+      left: 20%;
+      color: rgb(151, 145, 145);
+      text-transform: uppercase;
     }
-    ion-card-content {
-        padding: 0;
-    }
+  }
 }

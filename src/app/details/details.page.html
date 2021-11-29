@@ -1,23 +1,19 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>{{category?.name}}</ion-title>
+  <ion-toolbar color="danger">
+    <ion-title>{{branch?.name}}</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card *ngFor="let item of video">
-    <ion-card-header>
-      <ion-card-title>{{item.name}}</ion-card-title>
-    </ion-card-header>
-    <img src="{{item.image}}" alt="">
-    <ion-card-content>
-      {{item.description}}
-    </ion-card-content>
-    <ion-button
-  [routerLink]="['/video-details/'+ item._id]"
-    >WATCH</ion-button>
-  </ion-card>
+<ion-content slot="fixed" [fullscreen]="true">
+  <app-card
+  *ngFor="let item of category"
+  [card]="item"
+  [routerLink]="['/category-details/' +item._id]"
+
+  
+>
+  </app-card>
 </ion-content>

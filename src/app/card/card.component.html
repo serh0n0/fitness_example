@@ -1,14 +1,10 @@
-<ion-card>
-  <ion-card-content>
-    <div>
-
-      <img src="{{card.image}}" />
-    
-       <h1>
-       {{card.name}}
-
-       </h1> 
-    </div>
-  </ion-card-content>
-</ion-card>
-
+<ion-item detail="true" class="card-item" lines="none" scroll="fixed">
+  <ion-label>
+    <ion-avatar>
+      <img [src]="card?.image" alt="">
+    </ion-avatar>
+  </ion-label>
+  <ion-label>
+    <h2>{{card?.name}}</h2>
+  </ion-label>
+</ion-item>

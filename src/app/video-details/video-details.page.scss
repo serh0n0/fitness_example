@@ -1,10 +1,14 @@
 :host { 
-    font-family: "open-sans";
-    .video-description {
-        font-weight: 500;
-
-    }
+    ion-card {
+        margin:unset;
+        font-family: cursive;
+        align-items: center;
     video {
-        margin-bottom: 20px;
+        overflow: hidden;
+        width: 100%;
+        height: 233px;
     }
-}
+   ion-card-content {
+       margin-top: -10px;
+   }
+}}

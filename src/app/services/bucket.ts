@@ -78,7 +78,8 @@ export interface Teacher{
   picture?: string;
   birthday?: Date | string;
   created_at?: Date | string;
-  speciality?: (Teacher_Speciality & id | string);
+  speciality?: (Teacher_Speciality & id | string) [];
+  biography?: string;
 }
 export namespace teacher {
   const BUCKET_ID = '618142b7b0ba86002e5d6552';
@@ -142,6 +143,8 @@ export interface Category{
   name?: string;
   description?: string;
   image?: string;
+  branches?: (Teacher_Speciality & id | string)[];
+
 }
 export namespace category {
   const BUCKET_ID = '618142b7b0ba86002e5d6555';
@@ -320,6 +323,7 @@ export interface Video{
   duration?: number;
   video?: string;
   upload_date?: Date | string;
+  category?: (Category & id | string);
 }
 export namespace video {
   const BUCKET_ID = '618142b6b0ba86002e5d654c';
@@ -650,6 +654,8 @@ export namespace watched_video {
 export interface Teacher_Speciality{
   _id?: string;
   name?: string;
+  image?: string;
+  description?:string;
 }
 export namespace teacher_speciality {
   const BUCKET_ID = '618142b6b0ba86002e5d6549';
