@@ -1,0 +1,33 @@
+:host {
+    ion-card {
+        border-radius: 50px;
+        box-shadow: inset 0px 0 14px 1px mediumaquamarine;
+        font-family: cursive;
+        
+    ion-card-title{
+        text-align: center;
+        font-weight: 600;
+    }
+    }
+    ion-slide {
+        padding-bottom:30px;
+      }
+      ion-slides {
+        ::ng-deep {
+            .swiper-pagination-bullet-active {
+                background-color: black;
+            }
+            .swiper-pagination-bullet {
+                background-color: black;
+            }
+            
+        }
+        
+    }
+    span {
+        position: absolute;
+        top: 50%;
+        left: 33%;
+        color: gray;
+    }
+}      

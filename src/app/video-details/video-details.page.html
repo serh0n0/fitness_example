@@ -2,19 +2,21 @@
   <ion-toolbar color="danger">
     <ion-title>{{video?.name}}</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button  defaultHref="/"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
   
 </ion-header>
 
 <ion-content>
- <ion-card>
-  <video  [src]="video?.video" controls>
+
+ <ion-card >
+  <video (play)="watchedVideo()"  autoplay="true" [src]="video?.video" controls>
+    <span ></span>
   </video>
    <ion-card-content>
      {{video?.description}}
    </ion-card-content>
  </ion-card>
- 
+
 </ion-content>

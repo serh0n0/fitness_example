@@ -15,11 +15,23 @@ export class CategoryDetailsPage implements OnInit {
    }
   id:any;
   video: Video[];
- async ngOnInit() {
-    this.id = this.router.snapshot.params.id;
+  text:any;
+  async ionViewWillEnter(){
     this.video = await this.getVideos(); 
-    console.log(this.video);
-       
+
+  
+    if(this.video?.length<=0)
+  
+    {
+        this.text='not found'
+      
+    }
+    else {
+            
+    }
+  }
+ async ngOnInit() {
+    this.id = this.router.snapshot.params.id;       
   }
 
    async getVideos() {

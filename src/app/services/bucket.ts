@@ -255,7 +255,9 @@ export interface Food_Program{
   created_at?: Date | string;
   days?: {
   day_of_week?: (1|2|3|4|5|6|7);
-  description?: string;}[];
+  meal?: {
+  description?: string;
+  number_of_meal?: number;}[];}[];
 }
 export namespace food_program {
   const BUCKET_ID = '618142b7b0ba86002e5d655c';
@@ -588,11 +590,13 @@ export namespace training {
   }
 }
 
+
 export interface Watched_Video{
   _id?: string;
   name?: string;
+  video?: (Video & id | string);
+  watched_date?: Date | string;
   user?: (User & id | string);
-  video?: (Video);
 }
 export namespace watched_video {
   const BUCKET_ID = '618142b8b0ba86002e5d656c';

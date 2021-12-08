@@ -11,17 +11,35 @@ import { food_program,Food_Program, initialize} from '../services/bucket';
 export class FoodProgramPage implements OnInit {
 id:any;
 foodProgram:Food_Program[];
+text:any;
   constructor(private router: ActivatedRoute) {
     initialize({identity:environment.token});
 
    }
+   async ionViewWillEnter(){
+    this.foodProgram = await this.getFoodProgram();
+
+  
+    if(this.foodProgram?.length<=0)
+  
+    {
+        this.text='Food program not found'
+      
+    }
+    else {
+            
+    }
+  }
 
  async ngOnInit() {
     this.id = this.router.snapshot.params.id;
     this.foodProgram = await this.getFoodProgram();
     console.log(this.foodProgram)
   }
+
   async getFoodProgram () {
-    return food_program.getAll({queryParams:{filter:{user:this.id},relation:true}})
+    return food_program.getAll({queryParams:{filter:{user:this.id},relation:true}});
+    
+    
   }
 }

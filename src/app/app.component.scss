@@ -1,5 +1,45 @@
 :host {
-    ion-app {
-        overflow: hidden;
+    ion-menu {
+
+      ion-header {
+          
+        ion-toolbar {
+          --background:black;
+          --opacity: 0.5;
+            text-align: center;
+            --color:white;
+            font-family: cursive;
+          strong {
+              margin-right: 30%;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+      ion-content {
+          --background:black;
+          opacity: 0.5;
+        ion-list {
+          display: unset;
+          width: 100%;
+          ion-item {
+            text-align: center;
+            --color:white;
+            font-family: cursive;
+            width: 80%;
+          --background:black;
+           --opacity: 0.5;
+          }
+          ion-item:hover {
+            --background: #0671d6;
+            ion-icon {
+              color: white;
+            }
+            ion-label {
+              color: white;
+            }
+          }
+        }
+      }
     }
   }

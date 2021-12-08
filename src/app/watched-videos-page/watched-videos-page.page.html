@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="danger">
     <ion-title>watched video</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
@@ -8,22 +8,15 @@
 </ion-header>
 
 <ion-content>
-  <ion-card >
-    <ion-slides pager="true" [options]="slideOpts">
-      <ion-slide  *ngFor="let item of watchedVideos"
+
+  <ion-card *ngFor="let item of watchedVideos" class="card-item"
   [routerLink]="['/video-details/'+item.video._id]"
-      
-      >
-        <ion-card-header>
-          
-          <ion-card-title>
-            {{item.video.name}}
-          </ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <img [src]="item.video.image" alt="">
-        </ion-card-content>
-      </ion-slide>
-    </ion-slides>
+  
+  >
+    <ion-icon name="play-circle-outline"></ion-icon>
+    <img [src]="item.video.image" alt="">
   </ion-card>
+  <span>{{text}}</span>
+
+
 </ion-content>

@@ -1,0 +1,43 @@
+:host {
+    
+    .container-fluid {
+      padding: 20px;
+      
+      .container {
+        border-radius: 10px;
+        background-color: beige;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        font-family: cursive;
+        box-shadow: inset 0px 0px 10px 0px #9f6700;
+        border-radius: 25px;
+        .title {
+          font-size: 1.5rem;
+          margin-bottom: 40px;
+          font-weight: 600;
+        }
+        ion-card-subtitle {
+          font-size: 1.2rem;
+          margin-bottom: 15px;
+        }
+        span {
+          color: #696996;
+        }
+        ion-slide {
+          padding-bottom:30px;
+        }
+        ion-slides {
+          ::ng-deep {
+              .swiper-pagination-bullet-active {
+                  background-color: black;
+              }
+              .swiper-pagination-bullet {
+                  background-color: black;
+              }
+          }
+        
+        }
+  }}}
+  
+  

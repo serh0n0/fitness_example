@@ -8,17 +8,14 @@
 </ion-header>
 
 <ion-content>
-  <div class="container-fluid" *ngFor="let item of foodProgram">
+  <div class="container-fluid" *ngFor="let item of foodProgram"
+  
+  [routerLink]="['/food-program-detail/' +item._id]"
+  
+  >
     <div class="container">
       <div class="title">{{item.name}}</div>
-      <ion-slides pager>
-        <ion-slide *ngFor="let item2 of item.days">
-          <div class="content">
-            <ion-card-subtitle>{{item2.day_of_week+". day"}}</ion-card-subtitle>
-            <span [innerHTML]="item2.description"> </span>
-          </div>
-        </ion-slide>
-      </ion-slides>
     </div>
   </div>
+  <span>{{text}}</span>
 </ion-content>

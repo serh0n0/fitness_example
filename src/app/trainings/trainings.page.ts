@@ -10,15 +10,27 @@ import { training,Training,initialize } from '../services/bucket';
 export class TrainingsPage implements OnInit {
 id:any;
 training: Training[];
+text:any;
   constructor(private router: ActivatedRoute) { 
     initialize({ identity:environment.token });
 
   }
+  async ionViewWillEnter(){
+    this.training = await this.getTraining();
+  
+    if(this.training?.length<=0)
+  
+    {
+        this.text='Training not found'
+      
+    }
+    else {
+            
+    }
+  }
 
   async ngOnInit() {
    this.id = this.router.snapshot.params.id;
-    this.training = await this.getTraining();
-    console.log(this.training);
     
   }
  async getTraining () {

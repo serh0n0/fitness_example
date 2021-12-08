@@ -10,26 +10,41 @@ import { watched_video,Watched_Video, initialize} from '../services/bucket';
 export class WatchedVideosPagePage implements OnInit {
 watchedVideos: Watched_Video[];
 id:any;
+text:any;
   constructor(private router: ActivatedRoute) { 
 
     initialize({ identity:environment.token });
 
   }
 
- async ngOnInit() {
-    this.id = this.router.snapshot.params.id;
-    this.watchedVideos = await this.getWatchedVideos();
-    console.log(this.watchedVideos) 
+async ionViewWillEnter(){
+  this.watchedVideos = await this.getWatchedVideos();
+
+  if(this.watchedVideos?.length<=0)
+
+  {
+      this.text='The video you watched was not found'
+    
   }
+  else {
+          
+  }
+}
+ async ngOnInit() {
+
+  
+
+    
+  this.id = this.router.snapshot.params.id;
+    
+    
+    
+  }
+  
 
  async getWatchedVideos() {
-    return watched_video.getAll({ queryParams: { filter: { user: this.id }, relation: true } });
+    return watched_video.getAll({ queryParams: { filter: { user: this.id }, relation: true ,limit:3,sort:{"watched_date":-1}} });
   }
-  slideOpts = {
-    initialSlide: 1,
-    sliderPerView:1,
-    spaceBetween:0,
-    speed: 400,
-    autoplay:true
-  }
+
+    
 }

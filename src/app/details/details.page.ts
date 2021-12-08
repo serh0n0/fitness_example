@@ -12,18 +12,31 @@ export class DetailsPage implements OnInit {
   id: any;
   category: Category[];
   branch:Teacher_Speciality;
+  text:any;
   constructor(private router: ActivatedRoute) {
     initialize({ identity:environment.token });
 
 
   }
+  async ionViewWillEnter(){
+    this.category = await this.getCategory();
+    this.branch = await this.getBranch();
+
+  
+    if(this.category?.length<=0)
+  
+    {
+        this.text='not found'
+      
+    }
+    else {
+            
+    }
+  }
   async ngOnInit() {
    this.id = this.router.snapshot.params.id;
 
     
-    this.category = await this.getCategory();
-    this.branch = await this.getBranch();
-    console.log(this.category);
 
 
 

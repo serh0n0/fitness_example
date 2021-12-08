@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Program</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div *ngFor="let item of program">
+    <div  *ngFor="let item of item.days">
+
+  <div class="container-fluid">
+    <div class="container">
+      <div class="title">{{item.day_of_week+". day"}}</div>
+      <ion-slides pager>
+        <ion-slide *ngFor="let item of item.meal">
+          <div class="content">
+            <ion-card-subtitle>{{item?.number_of_meal+". öğün"}}</ion-card-subtitle>
+            <span [innerHTML]="item.description"> </span>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+</div>
+
+</div>
+
+  
+
+</ion-content>
